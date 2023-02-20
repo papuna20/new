@@ -13,7 +13,7 @@ const toggleSubscription = (video) =>{
         }
     } else {
         store.state.Youtube.subscribed.push({ uploader_name: video.uploader, uploader_img: video.uploader_img, isSubscribed: true });
-    }
+    } 
     video.isSubscribed = !video.isSubscribed;
 }
 </script>
