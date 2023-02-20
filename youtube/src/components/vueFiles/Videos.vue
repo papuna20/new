@@ -8,9 +8,8 @@ const store = useStore()
 const toggleSubscription = (video) =>{
     if (video.isSubscribed) {
         const index = store.state.Youtube.subscribed.findIndex(sub => sub.uploader_name == video.uploader);
-        if (index != -1) {
-            store.state.Youtube.subscribed.splice(index, 1);
-        }
+        store.state.Youtube.subscribed.splice(index, 1);
+
     } else {
         store.state.Youtube.subscribed.push({ uploader_name: video.uploader, uploader_img: video.uploader_img, isSubscribed: true });
     } 
